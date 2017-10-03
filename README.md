@@ -53,19 +53,22 @@ This resource has the following actions:
 This resource has the following properties:
 
 `type`
-    **Ruby Type:** String
 
-    Specifies the type of kernel to be installed (typically included are 'generic' and 'lowlatency')
+**Ruby Type:** String
+
+Specifies the type of kernel to be installed (typically included are 'generic' and 'lowlatency')
 
 `headers`
-    **Ruby Types:** TrueClass, FalseClass
 
-    Optionally install the associated Kernel Headers package for this kernel version. Default value: `true`
+**Ruby Types:** TrueClass, FalseClass
+
+Optionally install the associated Kernel Headers package for this kernel version. Default value: `true`
 
 `reboot_on_install`
-    **Ruby Types:** TrueClass, FalseClass
 
-    Optionally reboot the system immediately on install or update of kernel verion. Default value: `false`
+**Ruby Types:** TrueClass, FalseClass
+
+Optionally reboot the system immediately on install or update of kernel verion. Default value: `false`
 
 ## Examples
 
