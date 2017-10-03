@@ -1,0 +1,11 @@
+name             'ppa_kernel'
+maintainer       'Stuart Harland'
+maintainer_email 'essjayhc@gmail.com'
+license          'MIT'
+description      'Installs/Configures ppa_kernel'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+source_url       'github.com/essjayhch/chef-ppa_kernel'
+issues_url       'github.com/essjayhch/chef-ppa_kernel/issues'
+version          '0.1.0'
+chef_version     '> 12'
+supports         'debian'
