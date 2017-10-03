@@ -1,6 +1,6 @@
 name             'ppa_kernel'
 maintainer       'Stuart Harland'
-maintainer_email 'essjayhc@gmail.com'
+maintainer_email 'essjayhc@gmail.com,infra@livelinktechnology.net'
 license          'MIT'
 description      'Installs/Configures ppa_kernel'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
