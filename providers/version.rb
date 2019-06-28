@@ -6,7 +6,7 @@ end
 
 provides :ppa_kernel_version
 def load_current_resource
-  @new_resource.source_url = 'http://kernel.ubuntu.com/~kernel-ppa/mainline'
+  @new_resource.source_url = 'https://kernel.ubuntu.com/~kernel-ppa/mainline'
   @new_resource.source_prefix = "#{@new_resource.source_url}/v"\
                                 "#{@new_resource.version}/"
   @new_resource.build_date = latest_build_date(@new_resource)

@@ -3,7 +3,9 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
+  client_rb:
+    chef_license: accept
 
 platforms:
   - name: ubuntu-14.04
