@@ -46,7 +46,7 @@ rescue
   log "Unable to retrieve build log, #{retry_remaining(3)} remaining retries"
   retry if retry?(3)
   # Throw a wobbly if it can't be retrieved
-  log 'Unable to retrieve build log, not retrying'
+  Chef::Log.warn 'Unable to retrieve build log, not retrying'
   raise
 end
 
