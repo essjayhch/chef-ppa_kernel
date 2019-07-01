@@ -40,7 +40,7 @@ end
 def download_last_build_log(res)
   # Retrieve it if it doesn't exist locally
   result = Net::HTTP.get(build_log_uri(res))
-  ::File.write(build_log_cache(res, 'latest'), result.lines.last)
+  ::File.write(build_log_cache(res, 'latest'), result.lines[-3..-1])
   result.lines.last
 rescue
   log "Unable to retrieve build log, #{retry_remaining(3)} remaining retries"
@@ -75,7 +75,7 @@ def retry_remaining(r)
 end
 
 def current_build_log(res)
-  ::IO.readlines(build_log_cache(res, 'current')).last
+  ::IO.readlines(build_log_cache(res, 'current'))
 rescue
   nil
 end
@@ -116,7 +116,7 @@ end
 
 def download_kernel(r)
   remote_file cache_path(r.image_file) do
-    source "#{r.source_prefix}/#{r.image_file}"
+    source ::File.join r.source_prefix, r.image_file
     action :create_if_missing
     notifies :install,
              "dpkg_package[linux-image-#{r.version}-#{r.type}-#{r.build_date}]",
